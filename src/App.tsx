@@ -58,7 +58,7 @@ export default function App() {
     }
   };
 
-  const handleMouseUp = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseUp = () => {
     if (!treeRef.current) return;
     setIsDragging(false);
   };
