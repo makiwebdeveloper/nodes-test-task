@@ -1,0 +1,131 @@
+.tree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  margin-right: -25px;
+}
+
+.tree ul {
+  position: relative;
+  padding-top: 20px;
+  transition: .5s;
+}
+
+.tree li {
+  display: inline-table;
+  text-align: center;
+  position: relative;
+  padding: 10px 50px;
+}
+
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  border-top: 1px solid #ccc;
+  width: 51%;
+  height: 10px;
+  top: 0;
+  right: 50%;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+ padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0px 5px 0px 0px;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0px 0px 0px;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li .content {
+  display: inline-grid;
+  text-decoration-line: none;
+  /* transition: .5s; */
+  position: relative;
+}
+
+.tree li .content span {
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.tree li .content input {
+  padding: 13px 10px;
+  text-align: center;
+  width: 125px;
+  border: 1px solid #ccc;
+
+}
+
+.tree li .content .btns {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -80px;
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+}
+
+.content .btns button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .btns button svg {
+  width: 12px;
+  height: 12px;
+}
+
+
+.destructive {
+  background-color: rgb(255, 94, 94);
+  color: #fff;
+}
+
+.success {
+  background-color: rgb(100, 236, 88);
+  color: #fff;
+}
+
+.warning {
+  background-color: rgb(245, 171, 53);
+  color: #fff;
+}
